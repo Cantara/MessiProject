@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>no.cantara.messi</groupId>
+    <artifactId>messi-project</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Messi POM Project</name>
+    <description>Messi POM Project</description>
+    <url>https://github.com/Cantara/MessiProject</url>
+    <inceptionYear>2024</inceptionYear>
+
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ove Ranheim</name>
+            <email>ove.ranheim@gmail.com</email>
+            <url>https://www.linkedin.com/in/overanheim/</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/cantara/messi-project.git</connection>
+        <developerConnection>scm:git:git@github.com:cantara/messi-project.git</developerConnection>
+        <url>https://github.com/cantara/messi-project/tree/master</url>
+        <tag>HEAD</tag>
+    </scm>
+
+
+    <modules>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.5.1</version>
+                <executions>
+                    <execution>
+                        <id>enforce-maven</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>${java.version}</version>
+                                </requireJavaVersion>
+                                <requireMavenVersion>
+                                    <version>[3.6.3,4)</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
