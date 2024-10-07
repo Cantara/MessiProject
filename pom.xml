@@ -41,6 +41,12 @@
 
 
     <modules>
+        <module>MessiSDK</module>
+        <module>MessiFilesystemProvider</module>
+        <module>MessiS3Provider</module>
+        <module>MessiGCSProvider</module>
+        <module>MessiSQSProvider</module>
+        <module>MessiKinesisProvider</module>
     </modules>
 
     <build>
@@ -48,7 +54,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.5.0</version>
                 <executions>
                     <execution>
                         <id>enforce-maven</id>
